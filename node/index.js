@@ -4,8 +4,7 @@ const app = express()
 const port = 3000
 
 const config = {
-    host: 'localhost',
-    port: 3307,
+    host: 'db',
     user: 'root',
     password: 'root',
     database: 'nodedb'

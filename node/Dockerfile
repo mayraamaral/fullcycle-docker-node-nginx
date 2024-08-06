@@ -1,4 +1,4 @@
-FROM 20.16.0-alpine
+FROM node:20.16.0-alpine
 
 ENV DOCKERIZE_VERSION v0.7.0
 
