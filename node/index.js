@@ -25,13 +25,13 @@ function selectAndCreateHtmlFromDatabase() {
     return new Promise((resolve, reject) => {
         connection.query(select, (err, results) => {
             if (err) {
-                console.error("Erro ao tentar carregar dados do banco de dados:", err);
+                console.error("Erro ao tentar carregar dados do banco de dados: ", err);
                 reject("Erro ao tentar carregar dados do banco de dados");
 
                 return;
             }
 
-            let html = `<h1>Full Cycle Rocks!!</h1>
+            let html = `<h1>Full Cycle Rocks!</h1>
                         <p>Resultados do banco:</p>
                         <table border="1">
                             <thead>
@@ -68,9 +68,9 @@ app.get('/', (req, res) => {
 process.on('SIGINT', () => {
     connection.end(err => {
         if (err) {
-            console.error('Erro ao fechar a conexão com o banco de dados: ', err);
+            console.error("Erro ao fechar a conexão com o banco de dados: ", err);
         } else {
-            console.log('\nConexão com o banco de dados fechada');
+            console.log("\nConexão com o banco de dados fechada");
         }
         process.exit(0);
     });
