@@ -9,7 +9,8 @@ RUN apk update --no-cache \
     
 WORKDIR /usr/app/src
 
-COPY . .
+COPY package*.json .
+COPY index.js .
 
 RUN npm i
 
