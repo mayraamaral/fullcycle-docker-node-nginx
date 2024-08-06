@@ -10,8 +10,9 @@ RUN apk update --no-cache \
 WORKDIR /usr/app/src
 
 COPY package*.json .
-COPY index.js .
 
 RUN npm i
+
+COPY . .
 
 EXPOSE 3000
